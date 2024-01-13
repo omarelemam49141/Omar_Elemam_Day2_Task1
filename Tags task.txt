@@ -1,0 +1,28 @@
+- How to list all tags
+=====================
+git tag
+or
+git tag -n --> for more info like the tag messages
+=====================================================
+=====================================================
+- How to delete tag locally
+=========================
+git tag -d tag_name
+-------------------------
+- How to delete tag remotely
+=========================
+git push origin --delete tag_name
+=====================================================
+=====================================================
+Git rebase
+**************
+A Git command that allows you to modify the commit history of a branch.
+It is used to combine the changes from one branch into another by applying the individual commits from one branch on top of another.
+Unlike git merge, which creates a new merge commit, git rebase add the changes linearly.
+example:
+1- you have to commit any uncommited changes first
+2- Switch/Checkout to the branch you want to combine to another branch
+	git checkout your_branch
+3- Rebase!
+	git rebase main
+	This command applies each commit in your_branch one by one on top of the latest commit in the 	target branch. without creating a new merge commit, so that the commit history is cleaner 
